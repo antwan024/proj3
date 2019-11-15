@@ -47,18 +47,8 @@ module.exports = {
 
     }
 
+};
 
 
 
-//     db.user.aggregate(
-//         // Limit to relevant documents and potentially take advantage of an index
-//         { $match: {
-//             user_id: "foo"
-//         }},
-    
-//         { $project: {
-//             user_id: 1,
-//             total: { $add: ["$user_totaldocs", "$user_totalthings"] }
-//         }}
-//     )
-// };
+

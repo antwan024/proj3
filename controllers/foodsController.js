@@ -46,7 +46,11 @@ module.exports = {
                     total: { $add: ["$foodPoints"] }
                 }}
             )
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     }
+
+};
 
 
 

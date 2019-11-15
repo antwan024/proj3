@@ -33,5 +33,20 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+    },
+    addPoints: function(req, res) {
+        db.Event
+            .aggregate(
+                { $match: {
+                    _id: "foo"
+                }},
+            
+                { $project: {
+                    _id: 1,
+                    total: { $add: ["$eventPoints"] }
+                }}
+            )
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     }
 };
