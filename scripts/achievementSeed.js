@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/anthonyProject3"
+  "mongodb://localhost/bestLife"
 );
 
 const achievementSeed = [
@@ -13,28 +13,28 @@ const achievementSeed = [
     type: "foodPoints",
     achievementPoints: 10,
     summary: "Earned a free lunch at Chipotle!",
-    date: new Date(Date.now()),
+    date: "2020-1-15",
     earned: false
   },
   {
     type: "eventPoints",
     achievementPoints: 10,
     summary: "Earned a free Live Nation show!",
-    date: new Date(Date.now()),
+    date: "2019-12-19",
     earned: false
   },
   {
     type: "workoutPoints",
     achievementPoints: 10,
     summary: "Earned a free Yoga session!",
-    date: new Date(Date.now()),
+    date: "2019-12-15",
     earned: false
   },
   {
     type: "foodPoints",
     achievementPoints: 10,
     summary: "Earned a free culinary session at Cook St!",
-    date: new Date(Date.now()),
+    date: new Date(Date.now("<YYYY-mm-dd>")),
     earned: false
   }
 ];
